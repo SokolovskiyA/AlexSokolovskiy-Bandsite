@@ -1,23 +1,23 @@
 @font-face {
   font-family: "Avenir Next";
-  src: url(../../assets/font/AvenirNextLTPro-Regular.otf) format("otf"), url(../../assets/font/Alternative-files/AvenirNextLTPro.ttf);
+  src: url(../assets/font/AvenirNextLTPro-Regular.otf) format("otf"), url(../assets/font/Alternative-files/AvenirNextLTPro.ttf);
   font-weight: 400;
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url(../../assets/font/AvenirNextLTPro-Demi.otf) format("otf"), url(../../assets/font/Alternative-files/AvenirNextLTProDemi.ttf);
+  src: url(../assets/font/AvenirNextLTPro-Demi.otf) format("otf"), url(../assets/font/Alternative-files/AvenirNextLTProDemi.ttf);
   font-weight: 600;
 }
 @font-face {
   font-family: "Avenit Next";
-  src: url(../../assets/font/AvenirNextLTPro-Bold.otf), url(../../assets/font/Alternative-files/AvenirNextLTProBold.ttf);
+  src: url(../assets/font/AvenirNextLTPro-Bold.otf) format "otf", url(../assets/font/Alternative-files/AvenirNextLTProBold.ttf);
   font-weight: 700;
 }
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Avenir Next";
+  font-family: "Avenir Next", sans-serif;
 }
 
 a {
@@ -42,7 +42,7 @@ header {
   display: flex;
   align-items: stretch;
   list-style: none;
-  color: #FFFFFF;
+  color: #afafaf;
 }
 .nav__list {
   width: 50%;
@@ -61,9 +61,11 @@ header {
 .nav__list:hover {
   border-bottom: 0.25rem solid #FFFFFF;
   transition: 1s;
+  color: #e1e1e1;
 }
 .nav__page-on {
   border-bottom: 0.25rem solid #FFFFFF;
+  color: #FFFFFF;
 }
 
 .hero-section {
@@ -84,6 +86,7 @@ header {
 
 .about {
   padding: 1rem;
+  color: #323232;
 }
 .about__header {
   font-size: 1.5rem;
@@ -141,6 +144,11 @@ header {
 }
 .gallery__item:hover {
   filter: none;
+  transition: 1s;
+}
+
+footer {
+  background-color: #323232;
 }
 
 .footer {
@@ -161,7 +169,7 @@ header {
   line-height: 2rem;
 }
 .footer__link {
-  margin-right: 1.25rem;
+  margin-right: 1.5rem;
 }
 .footer__contacts {
   display: flex;
@@ -180,6 +188,9 @@ header {
   height: 1.25rem;
   margin: 2rem 0 0;
   align-self: flex-start;
+}
+.footer__link-icon {
+  height: 1.75rem;
 }
 
 @media (min-width: 48.0625rem) {
@@ -311,11 +322,19 @@ header {
 @media (min-width: 80rem) {
   .nav {
     padding: 0 4rem;
+    max-width: 90rem;
+    margin: auto;
+  }
+  .hero-section {
+    max-width: 1440px;
+    margin: auto;
   }
   .hero-section__header {
     margin: 6rem;
   }
   .about {
+    max-width: 90rem;
+    margin: auto;
     padding: 2rem 6rem;
   }
   .about__header {
@@ -328,9 +347,13 @@ header {
     padding: 0 5rem;
   }
   .gallery {
+    max-width: 90rem;
+    margin: auto;
     padding: 2rem 6rem;
   }
   .footer {
+    max-width: 90rem;
+    margin: auto;
     padding: 2rem 6rem;
   }
   .footer__contacts {
