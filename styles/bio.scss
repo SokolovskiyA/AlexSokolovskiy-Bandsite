@@ -1,0 +1,289 @@
+@use './partials/typography' as *;
+@use './partials/colors' as *;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Avenir Next';
+}
+a {
+    text-decoration: none;
+    color: inherit
+}
+header {
+    background-color: $BandSite-Black;
+}
+.nav {
+    background-color: $BandSite-Black;
+    display: flex;
+    flex-direction: column;
+    &__logo {
+        height: 1.25rem;
+        margin: 1rem;
+    }
+    &__item {
+        display: flex;
+        align-items: stretch;
+        list-style: none;
+        color: $white;
+    }
+    &__list {
+        width: 50%;
+        display: flex;
+        align-items: stretch;
+        border-bottom: .25rem solid $BandSite-Black;
+        padding: 0.5rem;
+    }
+    &__link {
+        @include subheader-mobile;
+        width: 100%;
+        text-align: center;
+    }
+    &__list:hover {
+        border-bottom: .25rem solid $white;
+        transition: 1s;
+    }
+    &__page-on {
+        border-bottom: .25rem solid $white; 
+    }
+}
+
+.hero-section {
+    background-image:linear-gradient(to right, rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url(../assets/images/hero-bio.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    &__header{
+        @include page-header-mobile;
+        color: $white;
+        margin: 1rem;
+    }
+}
+.about {
+    padding: 1rem;
+    &__header {
+        @include section-header-mobile;
+        margin: 1rem 0;
+    }
+    &__quotation {
+        @include subheader-mobile;
+    }
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+    &__quote {
+        margin-bottom: 0.5rem;
+    }
+    &__person {
+        margin-bottom: 0.5rem;
+    }
+    &__text-header {
+        @include subheader-mobile;
+        margin: 1rem 0;
+    }
+    &__paragraph {
+        @include body-copy-mobile;
+        margin-bottom: 0.5rem;
+    }
+}
+.gallery {
+    padding: 1rem;
+    background-color: $alabaster;
+    &__header {
+        @include section-header-mobile;
+        margin: 1rem 0;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    &__item {
+        width: 100%;
+        height: auto;
+        filter: grayscale(80%);
+    }
+    &__item:hover {
+        filter: none;
+    }
+}
+.footer {
+    background-color: $BandSite-Black;
+    color: $white;
+    @include body-copy-mobile;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    &__header {
+        margin-top: 1rem;
+        @include section-header-mobile;
+    }
+    &__link {
+        margin-right: 1.25rem;
+    }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    &__contact-name {
+        font-weight: 600;
+    }
+    &__logo {
+        height: 1.25rem;
+        margin: 2rem 0 0;
+        align-self: flex-start;
+    }
+}
+@media (min-width: 48.0625rem) {
+    .nav {
+        flex-direction: row;
+        &__logo {
+            margin: 2rem;
+        }
+        &__list {
+            align-self: stretch;
+            margin: 0 1rem;
+            display: flex;
+            align-items: center;
+        }
+        &__link {
+            justify-content: center;
+            @include body-copy;
+        }
+    }   
+    .hero-section {
+        min-height: 80vh;
+        &__header {
+            margin: 2rem;
+            @include page-header;
+            font-weight: 600;
+        } 
+    }
+    .about {
+        padding: 2rem;
+        &__header {
+            @include section-header;
+            margin: 2rem 0;
+        }
+        &__quotation {
+            @include subheader;
+            padding: 1rem 3rem;
+        }
+        &__quote { 
+            margin: 1.5rem 0 1rem;
+        }
+        &__person {
+            @include body-copy;
+            font-weight: 600;
+        }
+        &__main {
+            padding: 0 3rem;
+        }
+        &__text-header {
+            @include subheader;
+            margin: 1rem 0 2rem;
+        }
+        &__paragraph {
+            @include body-copy;
+            margin: 0 1rem 1rem 0;
+        }
+        &__text {
+            display: flex;
+        }
+    }
+    .gallery {
+        padding: 2rem;
+        &__header {
+            @include section-header;
+            margin: 1rem 0 2rem;
+        }
+        &__container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__item {
+            max-width: 30%;
+            height: auto;
+        }
+    }
+    .footer {
+        padding: 2rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        &__header {
+            @include section-header;
+            order: -3;
+        }
+        &__icons-container {
+            order: -2;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            margin-left: 2rem;
+        }
+        &__logo {
+            order: -1;
+            justify-self: end;
+            margin: auto 0 auto auto;
+        }
+        &__contacts {
+            flex-direction: row;
+            gap: 3rem;
+            width: 100%;
+            margin: 1rem 0 2rem;
+        }
+        &__contact {
+            @include footer-copy;
+        }
+    }
+}
+@media (min-width: 80rem) {
+    .nav {
+        padding: 0 4rem;
+    }
+    .hero-section {
+        &__header {
+            margin: 6rem;
+        }
+    }
+    .about {
+        padding: 2rem 6rem;
+        &__header {
+            font-weight: 600;
+        }
+        &__quotation {
+            padding: 1rem 5rem;
+        }
+        &__main {
+            padding: 0 5rem; 
+        }
+    }
+    .gallery {
+        padding: 2rem 6rem;
+    }
+    .footer {
+        padding: 2rem 6rem;
+        &__contacts {
+            gap: 6rem;
+        }
+        &__icons-container {
+            margin-left: 5rem;
+        }
+    }
+
+}
