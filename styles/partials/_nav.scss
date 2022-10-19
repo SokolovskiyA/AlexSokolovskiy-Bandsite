@@ -1,0 +1,71 @@
+@use './colors' as *;
+@use './typography' as *;
+
+header {
+    background-color: $BandSite-Black;
+}
+.nav {
+    background-color: $BandSite-Black;
+    display: flex;
+    flex-direction: column;
+    &__logo-link {
+        text-align: center;
+    }
+    &__logo {
+        height: 1.25rem;
+        margin: 1rem 0 0;
+    }
+    &__item {
+        display: flex;
+        align-items: stretch;
+        list-style: none;
+        color: $silver;
+    }
+    &__list {
+        width: 50%;
+        display: flex;
+        align-items: stretch;
+        border-bottom: .25rem solid $BandSite-Black;
+        padding: 0.5rem;
+    }
+    &__link {
+        @include subheader-mobile;
+        width: 100%;
+        text-align: center;
+    }
+    &__list:hover {
+        border-bottom: .25rem solid $white;
+        transition: 1s;
+        color: $mecrury;
+    }
+    &__page-on {
+        border-bottom: .25rem solid $white; 
+        color: $white;
+    }
+}
+@media (min-width: 48rem) { 
+    .nav {
+        display: flex;
+        flex-direction: row;
+        &__logo {
+            margin: 2rem;
+        }
+        &__list {
+            align-self: stretch;
+            margin: 0 1rem;
+            display: flex;
+            align-items: center;
+        }
+        &__link {
+            justify-content: center;
+            @include body-copy;
+        }
+    }
+}
+@media (min-width: 80rem) {
+    .nav {
+        padding: 0 4rem;
+        max-width: 90rem;
+        margin: auto;
+    }
+}
