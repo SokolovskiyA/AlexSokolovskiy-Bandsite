@@ -101,33 +101,38 @@ body {
 }
 @media (min-width: 48rem) {
     .shows {
-        padding: 1rem;
         &__header {
-            margin: 1rem 0 1rem 2rem;
+            margin: 1rem 2rem 2rem;
             @include section-header;
         }
+        &__container {
+            margin: 0 2rem;
+        }
         &__show {
-            display: grid;
-            grid-template-columns: 23% 23% 23% 23%;
-            padding: 1rem;
+            display: flex;
+            flex-direction: row;
+            padding: 1rem 0;
+            gap: 0;
+            width: 100%;
         }
         &__labels-div {
-            padding: 1rem;
-            display: grid;
-            grid-template-columns: 25% 25% 24%;
+            display: flex;
+            flex-direction: row;
         }
         .button-link {
-            padding: 1rem 2rem;
+            padding: 1rem;
         }
         &__show-div {
-            margin-right: 2.5rem;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-around;
+            width: 25%;
         }
         &__label {
             display: none;
-            width: 25%;
+        }
+        .label {
+            min-width: 25%;
         }
     }
 }
@@ -144,7 +149,7 @@ body {
         }
         &__container {
             width: 90%;
-            margin: 1rem 0;
+            margin: 1rem 2rem;
         }
     }
 }
