@@ -339,6 +339,7 @@ body {
   }
   .shows .button-link {
     padding: 1rem;
+    font-weight: 600;
   }
   .shows__show-div {
     display: flex;
