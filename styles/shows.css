@@ -27,12 +27,14 @@ a {
 
 .button-link {
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 2rem;
   background-color: #323232;
   color: #FFFFFF;
   text-transform: uppercase;
   font-weight: 600;
+  font-size: 1rem;
   border-radius: 0.25rem;
+  border-style: none;
 }
 .button-link:hover {
   background-color: #000000;
@@ -42,6 +44,7 @@ a {
   text-transform: uppercase;
   font-weight: 600;
   color: #afafaf;
+  font-size: 0.875rem;
 }
 
 header {
@@ -299,21 +302,18 @@ body {
   font-weight: 700;
   line-height: 2rem;
 }
+.shows__labels-div {
+  display: none;
+}
 .shows__show {
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1rem;
   border-bottom: 1px solid #e1e1e1;
-}
-.shows__label {
-  margin-bottom: 0.5rem;
 }
 .shows__date {
   font-weight: 600;
-}
-.shows__labels-div {
-  display: none;
 }
 
 @media (min-width: 48rem) {
@@ -323,35 +323,37 @@ body {
     font-weight: 700;
     line-height: 2.75rem;
   }
-  .shows__container {
-    margin: 0 2rem;
-  }
-  .shows__show {
-    display: flex;
-    flex-direction: row;
-    padding: 1rem 0;
-    gap: 0;
-    width: 100%;
-  }
   .shows__labels-div {
     display: flex;
     flex-direction: row;
-  }
-  .shows .button-link {
-    padding: 1rem;
-    font-weight: 600;
-  }
-  .shows__show-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 25%;
   }
   .shows__label {
     display: none;
   }
   .shows .label {
     min-width: 25%;
+  }
+  .shows__container {
+    margin: 0 2rem;
+  }
+  .shows__show {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    padding: 1rem 0;
+  }
+  .shows__date {
+    min-width: 25%;
+  }
+  .shows__venue {
+    min-width: 25%;
+  }
+  .shows__location {
+    min-width: 25%;
+  }
+  .shows .button-link {
+    width: 25%;
+    margin-left: auto;
   }
 }
 @media (min-width: 80rem) {
@@ -368,6 +370,6 @@ body {
   }
   .shows__container {
     width: 90%;
-    margin: 1rem 2rem;
+    margin: 2rem 2rem;
   }
 }/*# sourceMappingURL=shows.css.map */

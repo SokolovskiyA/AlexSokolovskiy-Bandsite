@@ -82,21 +82,18 @@ body {
         margin: 1rem 0 1rem 1rem;
         @include section-header-mobile;
     }
+    &__labels-div {
+        display: none;
+    }
     &__show {
+        padding: 1rem;
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        padding: 1rem;
         border-bottom: 1px solid $mecrury;
-    }
-    &__label {
-        margin-bottom: 0.5rem;
     }
     &__date {
         font-weight: 600;
-    }
-    &__labels-div {
-        display: none;
     }
 }
 @media (min-width: 48rem) {
@@ -105,35 +102,37 @@ body {
             margin: 1rem 2rem 2rem;
             @include section-header;
         }
-        &__container {
-            margin: 0 2rem;
-        }
-        &__show {
-            display: flex;
-            flex-direction: row;
-            padding: 1rem 0;
-            gap: 0;
-            width: 100%;
-        }
         &__labels-div {
             display: flex;
             flex-direction: row;
-        }
-        .button-link {
-            padding: 1rem;
-            font-weight: 600;
-        }
-        &__show-div {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            width: 25%;
         }
         &__label {
             display: none;
         }
         .label {
             min-width: 25%;
+        }
+        &__container {
+            margin: 0 2rem;
+        }
+        &__show {
+            flex-direction: row;
+            align-items: center;
+            gap: 0;
+            padding: 1rem 0;
+        }
+        &__date {
+            min-width: 25%;
+        }
+        &__venue {
+            min-width: 25%;
+        }
+        &__location {
+            min-width: 25%;
+        }
+        .button-link {
+            width: 25%;
+            margin-left: auto;
         }
     }
 }
@@ -150,7 +149,7 @@ body {
         }
         &__container {
             width: 90%;
-            margin: 1rem 2rem;
+            margin: 2rem 2rem;
         }
     }
 }

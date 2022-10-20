@@ -27,12 +27,14 @@ a {
 
 .button-link {
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 2rem;
   background-color: #323232;
   color: #FFFFFF;
   text-transform: uppercase;
   font-weight: 600;
+  font-size: 1rem;
   border-radius: 0.25rem;
+  border-style: none;
 }
 .button-link:hover {
   background-color: #000000;
@@ -42,6 +44,7 @@ a {
   text-transform: uppercase;
   font-weight: 600;
   color: #afafaf;
+  font-size: 0.875rem;
 }
 
 header {
