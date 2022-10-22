@@ -21,9 +21,12 @@ const comments = document.createElement('div');
 comments.classList.add("comments__container");
 commentSection.appendChild(comments);
 
-//creating 3 <p> elements with class 'label' and nesting it within showsLabelDiv
+//saying to listen to submit event from the form and grabbing all the values from event form.
+const commentForm = document.getElementById ('commentForm');
+console.log(commentForm);  //grabbing the form from html 
 
-function addComment (commentsArray) {
+// 1 comment created 
+function displayComment (commentsArray) {
     
     const commentArticle = document.createElement("article");
     commentArticle.classList.add ("comments__article");
@@ -53,6 +56,44 @@ function addComment (commentsArray) {
     commentText.innerText = commentsArray.comment;
 }   
 
+commentForm.addEventListener ('submit', function(event) {
+    event.preventDefault();
+    console.log('form submitted');
+    console.log(event.target.name.value);
+    console.log(event.target.comment.value);
+    
+    comments.innerText = '';
+    
+    const dateNow = new Date();
+    var options = {
+        year: "numeric",
+        month: "2-digit",
+        day: "numeric"
+    };
+
+    //creating a new object and telling to construct it from the values of the form
+    const newCommentEntry = {
+        name: event.target.name.value,
+        date: dateNow.toLocaleDateString("en", options),
+        comment: event.target.comment.value
+    }
+    console.log(newCommentEntry);
+
+    commentsArray.unshift(newCommentEntry);
+    console.log(commentsArray);
+    
+
+
+    for (let i = 0; i < commentsArray.length; i++) {
+    displayComment(commentsArray[i]);
+    }
+});
+
 for (let i = 0; i < commentsArray.length; i++) {
-    addComment(commentsArray[i]);
-}
+    displayComment(commentsArray[i]);
+};
+
+
+
+
+

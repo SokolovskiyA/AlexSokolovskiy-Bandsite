@@ -77,8 +77,31 @@ function addShows (featureShows) {
     button.classList.add('button-link');
     button.innerText = 'buy tickets';
     showsShow.appendChild(button);
-}
+};
 
 for (let i = 0; i<futureShows.length; i++){
     addShows(futureShows[i])
-}
+};
+
+
+var show = document.querySelectorAll('.shows__show');
+console.log(show);
+
+show.forEach
+
+
+        /*(el=> {
+    el.addEventListener('click', function(show){
+        
+        el.classList.add('active');
+    });
+});*/
+
+show.forEach(function(item) {
+    item.addEventListener("click", function() {
+        show.forEach(function(element) {
+        element.classList.remove("active");
+        });
+        item.classList.add('active');
+    })
+});

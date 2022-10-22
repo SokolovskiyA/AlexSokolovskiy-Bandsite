@@ -407,15 +407,105 @@ body {
   }
 }
 .comments {
-  padding: 1rem;
+  padding: 1rem 0;
   color: #323232;
   background-color: #FFFFFF;
 }
 .comments__header {
-  margin: 1rem 0;
+  margin: 1rem;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 2rem;
+}
+.comments__form-container {
+  display: flex;
+  margin: 1rem;
+}
+.comments__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 0.5rem;
+  width: 85%;
+  margin-left: auto;
+}
+.comments__name-text {
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid #e1e1e1;
+  background-color: #fafafa;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  margin: 0.25rem 0 1.25rem;
+}
+.comments__comment-text {
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid #e1e1e1;
+  background-color: #fafafa;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  margin: 0.25rem 0 1.25rem;
+  resize: none;
+}
+.comments__name-text:focus {
+  outline: none;
+  border: 1px solid #323232;
+}
+.comments__comment-text:focus {
+  outline: none;
+  border: 1px solid #323232;
+}
+.comments__button {
+  margin: 0.5rem 0;
+}
+.comments__container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  border-top: 1px solid #e1e1e1;
+}
+.comments__article {
+  display: flex;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 1rem 0;
+}
+.comments__avo {
+  display: inline-block;
+  background-color: #e1e1e1;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  margin: 0.5rem;
+  overflow: hidden;
+}
+.comments__form-avo {
+  margin-top: 1.5rem;
+}
+.comments__avo-img {
+  height: 100%;
+  width: auto;
+}
+.comments__comment {
+  width: 85%;
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.comments__name {
+  margin: 0.5rem;
+  font-weight: 600;
+}
+.comments__date {
+  margin-left: auto;
+  text-align: end;
+  color: #afafaf;
+}
+.comments__text {
+  min-width: 100%;
+  margin: 0.5rem;
 }
 
 @media (min-width: 48rem) {
@@ -426,6 +516,21 @@ body {
     font-size: 2.25rem;
     font-weight: 700;
     line-height: 2.75rem;
+  }
+  .comments__container {
+    max-width: 80%;
+    margin: auto;
+  }
+  .comments__form-container {
+    max-width: 80%;
+    margin: 0 auto 1rem;
+  }
+  .comments__avo {
+    width: 48px;
+    height: 48px;
+  }
+  .comments__button {
+    margin-left: auto;
   }
 }
 @media (min-width: 80rem) {

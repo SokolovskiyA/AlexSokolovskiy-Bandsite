@@ -168,20 +168,120 @@ body {
     }
 }
 .comments {
-    padding: 1rem;
+    padding: 1rem 0;
     color: $BandSite-Black;
     background-color: $white;
     &__header {
-        margin: 1rem 0;
+        margin: 1rem;
         @include section-header-mobile;
     }
-    
+    &__form-container {
+        display: flex;
+        margin: 1rem;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-left: 0.5rem;
+        width: 85%;
+        margin-left: auto;
+    }
+    &__name-text {
+        padding: .75rem;
+        border-radius: .25rem;
+        border: 1px solid $mecrury;
+        background-color: $alabaster;
+        @include body-copy;
+        margin: .25rem 0 1.25rem;
+    }
+    &__comment-text {
+        padding: .75rem;
+        border-radius: .25rem;
+        border: 1px solid $mecrury;
+        background-color: $alabaster;
+        @include body-copy;
+        margin: .25rem 0 1.25rem;
+        resize: none;
+    }
+    &__name-text:focus {
+        outline: none;
+        border: 1px solid $BandSite-Black;
+    }
+    &__comment-text:focus {
+        outline: none;
+        border: 1px solid $BandSite-Black;
+    }
+    &__button {
+        margin: 0.5rem 0;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+        border-top: 1px solid $mecrury;
+    }
+    &__article {
+        display: flex;
+        border-bottom: 1px solid $mecrury;
+        padding: 1rem 0;
+    }
+    &__avo {
+        display: inline-block;
+        background-color: $mecrury;
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+        margin: 0.5rem;
+        overflow: hidden;
+    }
+    &__form-avo {
+        margin-top: 1.5rem;
+    }
+    &__avo-img {
+        height: 100%;
+        width: auto;
+    }
+    &__comment {
+        width: 85%;
+        margin-left: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__name {
+        margin: 0.5rem;
+        font-weight: 600;
+    }
+    &__date {
+        margin-left: auto;
+        text-align: end;
+        color: $silver;
+    }
+    &__text {
+        min-width: 100%;
+        margin: 0.5rem;
+    }
 }
 @media (min-width:48rem) {
     .comments {
         padding: 2rem;
         &__header {
             @include section-header;
+        }
+        &__container {
+            max-width: 80%;
+            margin: auto;
+        }
+        &__form-container {
+            max-width: 80%;
+            margin: 0 auto 1rem;
+        }
+        &__avo {
+            width: 48px;
+            height: 48px;
+        }
+        &__button {
+            margin-left: auto;
         }
     }
 }
