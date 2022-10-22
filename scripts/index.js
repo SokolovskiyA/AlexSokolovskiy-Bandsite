@@ -14,7 +14,7 @@ const commentsArray = [{
         comment: 'I can`t stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can`t get enough.',
     },
 ];
-console.log(commentsArray)
+
 const commentSection = document.querySelector(".comments")
     
 const comments = document.createElement('div');
@@ -23,7 +23,7 @@ commentSection.appendChild(comments);
 
 //saying to listen to submit event from the form and grabbing all the values from event form.
 const commentForm = document.getElementById ('commentForm');
-console.log(commentForm);  //grabbing the form from html 
+  //grabbing the form from html 
 
 // 1 comment created 
 function displayComment (commentsArray) {
@@ -57,43 +57,42 @@ function displayComment (commentsArray) {
 }   
 
 commentForm.addEventListener ('submit', function(event) {
-    event.preventDefault();
-    console.log('form submitted');
-    console.log(event.target.name.value);
-    console.log(event.target.comment.value);
     
+    let nameField = document.querySelector('#name-text')
+    let commentField = document.querySelector('#comment-text')
     comments.innerText = '';
     
-    const dateNow = new Date();
-    var options = {
-        year: "numeric",
-        month: "2-digit",
-        day: "numeric"
-    };
-
-    //creating a new object and telling to construct it from the values of the form
-    const newCommentEntry = {
-        name: event.target.name.value,
-        date: dateNow.toLocaleDateString("en", options),
-        comment: event.target.comment.value
-    }
-    console.log(newCommentEntry);
-
-    commentsArray.unshift(newCommentEntry);
-    console.log(commentsArray);
-    
-
-
+    if (nameField.value === '' || nameField.value == null) {
+        event.preventDefault();
+        console.log("form is empty, Please fill-out the form");
+        nameField.classList.add('error');
+        commentField.classList.add('error');
+    }  else {
+        commentField.classList.remove('error');
+        event.preventDefault();
+        const dateNow = new Date();
+        var options = {
+            year: "numeric",
+            month: "2-digit",
+            day: "numeric"
+        };
+        //creating a new object and telling to construct it from the values of the form
+        const newCommentEntry = {
+            name: event.target.name.value,
+            date: dateNow.toLocaleDateString("en", options),
+            comment: event.target.comment.value
+        };
+        commentsArray.unshift(newCommentEntry);
+    } 
     for (let i = 0; i < commentsArray.length; i++) {
-    displayComment(commentsArray[i]);
-    }
+        displayComment(commentsArray[i]);
+    };
+    nameField.value = '';
+    commentField.value = '';
 });
 
 for (let i = 0; i < commentsArray.length; i++) {
     displayComment(commentsArray[i]);
 };
-
-
-
 
 

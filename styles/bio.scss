@@ -261,6 +261,10 @@ body {
         min-width: 100%;
         margin: 0.5rem;
     }
+    .error {
+        border: 1px solid #D22D2D;
+        background-color: hsla(0, 65%, 50%, 0.043);
+    }
 }
 @media (min-width:48rem) {
     .comments {
