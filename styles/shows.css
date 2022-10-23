@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Avenir Next";
-  src: url(../assets/font/AvenirNextLTPro.otf) format("otf"), url(../assets/font/Alternative-files/AvenirNextLTPro.ttf);
+  src: url(../assets/font/AvenirNextLTPro.otf) format("otf"), url(../assets/font/Alternative-files/AvenirNextLTPro.ttf) format "ttf";
   font-weight: 400;
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url(../assets/font/AvenirNextLTPro-Demi.otf) format("otf"), url(../assets/font/Alternative-files/AvenirNextLTProDemi.ttf);
+  src: url(../assets/font/AvenirNextLTPro-Demi.otf) format("otf"), url(../assets/font/Alternative-files/AvenirNextLTProDemi.ttf) format "ttf";
   font-weight: 600;
 }
 @font-face {
   font-family: "Avenit Next";
-  src: url(../assets/font/AvenirNextLTPro-Bold.otf) format "otf", url(../assets/font/Alternative-files/AvenirNextLTProBold.ttf);
+  src: url(../assets/font/AvenirNextLTPro-Bold.otf) format "otf", url(../assets/font/Alternative-files/AvenirNextLTProBold.ttf) format "ttf";
   font-weight: 700;
 }
 * {
@@ -27,7 +27,7 @@ a {
 
 .button-link {
   text-align: center;
-  padding: 1rem 2rem;
+  padding: 0.6rem 1.5rem;
   background-color: #323232;
   color: #FFFFFF;
   text-transform: uppercase;
@@ -44,7 +44,7 @@ a {
   text-transform: uppercase;
   font-weight: 600;
   color: #afafaf;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 
 header {
@@ -174,7 +174,7 @@ footer {
   }
   .footer__header {
     font-size: 2.25rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 2.75rem;
     order: -3;
   }
@@ -324,9 +324,9 @@ body {
 
 @media (min-width: 48rem) {
   .shows__header {
-    margin: 1rem 2rem 2rem;
+    margin: 1rem 2.75rem 2rem;
     font-size: 2.25rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 2.75rem;
   }
   .shows__labels-div {
@@ -378,5 +378,8 @@ body {
   .shows__container {
     width: 90%;
     margin: 2rem 2rem;
+  }
+  .shows__labels-div {
+    margin-bottom: 2rem;
   }
 }/*# sourceMappingURL=shows.css.map */

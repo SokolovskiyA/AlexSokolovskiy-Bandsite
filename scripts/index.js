@@ -1,3 +1,5 @@
+
+//create array of objects containing comments information
 const commentsArray = [{ 
         name: 'Connor Walton',
         date: '02/17/2021',
@@ -15,17 +17,19 @@ const commentsArray = [{
     },
 ];
 
+//grab the container for comment section
 const commentSection = document.querySelector(".comments")
     
+//create container for comments and append it to comment section
 const comments = document.createElement('div');
 comments.classList.add("comments__container");
 commentSection.appendChild(comments);
 
-//saying to listen to submit event from the form and grabbing all the values from event form.
+//grab comment form from by id
 const commentForm = document.getElementById ('commentForm');
-  //grabbing the form from html 
 
-// 1 comment created 
+
+//create a comment and by grabbing matching values from array of objects
 function displayComment (commentsArray) {
     
     const commentArticle = document.createElement("article");
@@ -56,19 +60,25 @@ function displayComment (commentsArray) {
     commentText.innerText = commentsArray.comment;
 }   
 
+//creating an event 'submit' from the form to set up action on thу click
 commentForm.addEventListener ('submit', function(event) {
     
+    //grab text and commetn field by id
     let nameField = document.querySelector('#name-text')
     let commentField = document.querySelector('#comment-text')
+    //clear up the commetn section
     comments.innerText = '';
-    
-    if (nameField.value === '' || nameField.value == null) {
+
+    // 
+    if ((nameField.value === '' || nameField.value == null) || (commentField.value === '' || commentField.value == null)) {
         event.preventDefault();
         console.log("form is empty, Please fill-out the form");
         nameField.classList.add('error');
         commentField.classList.add('error');
-    }  else {
+    } 
+    else {
         commentField.classList.remove('error');
+        nameField.classList.remove('error');
         event.preventDefault();
         const dateNow = new Date();
         var options = {

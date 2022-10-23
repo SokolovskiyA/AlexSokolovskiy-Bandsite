@@ -105,7 +105,7 @@ body {
 @media (min-width: 48rem) {
     .shows {
         &__header {
-            margin: 1rem 2rem 2rem;
+            margin: 1rem 2.75rem 2rem;
             @include section-header;
         }
         &__labels-div {
@@ -157,6 +157,9 @@ body {
         &__container {
             width: 90%;
             margin: 2rem 2rem;
+        }
+        &__labels-div {
+            margin-bottom: 2rem;
         }
     }
 }

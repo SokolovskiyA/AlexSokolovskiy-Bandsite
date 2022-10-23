@@ -1,19 +1,19 @@
 @font-face {
     font-family: 'Avenir Next';
     src: url(../assets/font/AvenirNextLTPro.otf) format("otf"),
-    url(../assets/font/Alternative-files/AvenirNextLTPro.ttf);
+    url(../assets/font/Alternative-files/AvenirNextLTPro.ttf) format ("ttf");
     font-weight: 400;
 }
 @font-face {
     font-family: 'Avenir Next';
     src: url(../assets/font/AvenirNextLTPro-Demi.otf) format("otf"),
-    url(../assets/font/Alternative-files/AvenirNextLTProDemi.ttf);
+    url(../assets/font/Alternative-files/AvenirNextLTProDemi.ttf)format ("ttf");
     font-weight: 600;
 }
 @font-face {
     font-family: 'Avenit Next';
     src: url(../assets/font/AvenirNextLTPro-Bold.otf) format ("otf"),
-    url(../assets/font/Alternative-files/AvenirNextLTProBold.ttf);
+    url(../assets/font/Alternative-files/AvenirNextLTProBold.ttf) format ("ttf");
     font-weight: 700;
 }
 
@@ -29,7 +29,7 @@
 }
 @mixin section-header {
     font-size: 2.25rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 2.75rem;
 }
 @mixin section-header-mobile {
