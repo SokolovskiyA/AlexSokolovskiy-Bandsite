@@ -62,7 +62,6 @@ function displayComment (commentsArray) {
 
 //creating an event 'submit' from the form to set up action on thу click
 commentForm.addEventListener ('submit', function(event) {
-    
     //grab text and commetn field by id
     let nameField = document.querySelector('#name-text')
     let commentField = document.querySelector('#comment-text')
@@ -81,7 +80,7 @@ commentForm.addEventListener ('submit', function(event) {
         nameField.classList.remove('error');
         event.preventDefault();
         const dateNow = new Date();
-        var options = {
+        var dateFormat = {
             year: "numeric",
             month: "2-digit",
             day: "numeric"
@@ -89,7 +88,7 @@ commentForm.addEventListener ('submit', function(event) {
         //creating a new object and telling to construct it from the values of the form
         const newCommentEntry = {
             name: event.target.name.value,
-            date: dateNow.toLocaleDateString("en", options),
+            date: dateNow.toLocaleDateString("en", dateFormat),
             comment: event.target.comment.value
         };
         commentsArray.unshift(newCommentEntry);
