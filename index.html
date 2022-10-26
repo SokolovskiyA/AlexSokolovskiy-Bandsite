@@ -65,7 +65,6 @@
                 </form>
             </article>
         </section>
-        <script src="./scripts/index.js"></script>
     </main>
     <footer>
         <div class="footer">
@@ -114,108 +113,10 @@
             <p>Copyright The Bees Knees &copy; 2021 All Rights Reserved</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./scripts/index.js"></script>
 </body>
 </html>
-
-<!--
-// loop  through array of objects and append to journal-entries
-
-// lForm.addEventListener('submit', (event) => {
-//     event.preventDefault();
-//     const title = event.target.title.value;
-//     const content = event.target.content.value;
-//     if (title == '') {
-//       console.log('title is empty');
-//       return;
-//     }
-//     journalEntriesArray.push({
-//       title,
-//       content,
-//     });
-//     renderJournalEntries(); // loop  through array of objects and append to journal-entries
-//   });
-//commentsData(); //call the function so it doesnt reset with "";
-
-
-// const imgElement = document.createElement("img");
-// imgElement.classList.add('comment-fetched__img')
-// imgElement.setAttribute('src="./assets/Images/avatarMercury.png"');
-// function addComments(listObj) {
-//     const card = document.createElement("div");
-//     card.classList.add()
-
-    
-// }
-
-
-// const form = document.querySelector('.comment-form');
-// console.log(form);
-
-// form.addEventListener('submit', (event) => {
-//     event.preventDefault
-//     console.log(event.target.name.value);
-//     console.log(event.target.comment.value);
-//     //pull the value from "name"
-
-// });
-
-
-
-
-// function addCardToMenu(menuObj) {
-//     const card = document.createElement("div"); //creates new element div
-//     card.classList.add("menu__card"); //assignes class to div created 
-    
-//     const item = document.createElement("div"); 
-//     item.classList.add("menu__item");
-//     item.innerText = menuObj.icon;
-//     const price = document.createElement("div");
-//     price.classList.add("menu__price");
-//     price.innerText = `$ ${menuObj.price}`;
-    
-//     card.appendChild(item); //says that item is a direct child of card 
-//     card.appendChild(price); //says that price is a direct child of card 
-//     const menuElement = document.querySelector(".menu") //
-//     menuElement.appendChild(card);
-
-    
-// }
-
-// item.addEventListener("click", function (event) {
-//     const cartItemsContainer = document.querySelector(".cart__items");
-//     const cartElement = document.createElement("div"); //creates new element div
-//     cartElement.classList.add("cart__item"); //assignes class to div created  
-//     console.log(event.target);
-//     cartElement.innerText = event.target.innerText;
-//     cartItemsContainer.appendChild(cartElement);
-// })    
-
-
-
-// for (let i=0; i<menuItems.length; i++){
-//     addCardToMenu(menuItems[i])
-// }
-// const conversationSection = [];
-// //function buttonHandler
-// const button = document.querySelector('.button');
-// console.log(button); //to make sure we are getting the right elemente
-// button.addEventListener('click', function(){
-//     console.log('btn clicked')//to make sure is working,console triggered when clicked 
-// }); //whenever we click this button we can have a function to run
-//mouseover
-
-//mouseout
-//const imgDiv = document.createAttribute('div');
-    //imgDiv.classList.add('comment-fetched__img-container')
-
-    //const imgElement = document.createElement("img");
-    //imgElement.classList.add('comment-fetched__img');
-    //mgElement.setAttribute('src="./assets/Images/avatarMercury.png"');
-    // create parent element
-    //const box = document.createElement('div');
-    // assign your css classes
-    //box.classList.add('comment-fetched__box');
--->
 
 
 
