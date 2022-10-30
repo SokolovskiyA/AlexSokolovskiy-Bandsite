@@ -46,7 +46,7 @@ function displayComment (commentArray, commentsContainer) {
 
     const like = document.createElement("img");
     like.classList.add("like-button");
-    like.src = "../assets/icons/SVG/icon-like.svg";
+    like.src = "./assets/icons/SVG/icon-like.svg";
     likeDeleteDiv.appendChild(like);
     like.setAttribute('id', commentArray.id);
 
@@ -66,7 +66,7 @@ function displayComment (commentArray, commentsContainer) {
     });
     const commentDelete = document.createElement("img");
     commentDelete.classList.add("delete-button");
-    commentDelete.src = "../assets/icons/SVG/icon-delete.svg";
+    commentDelete.src = "./assets/icons/SVG/icon-delete.svg";
     likeDeleteDiv.appendChild(commentDelete);
     commentDelete.setAttribute('id', commentArray.id);
 
