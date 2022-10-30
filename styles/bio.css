@@ -469,6 +469,8 @@ body {
 }
 .comments__article {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   border-bottom: 1px solid #e1e1e1;
   padding: 1rem 0;
 }
@@ -490,7 +492,6 @@ body {
 }
 .comments__comment {
   width: 85%;
-  margin-left: auto;
   display: flex;
   flex-wrap: wrap;
 }
@@ -543,4 +544,16 @@ body {
     margin: auto;
     padding: 2rem 6rem;
   }
+}
+.like-delete {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin: 0 1.5rem;
+}
+
+.like-button:hover, .delete-button:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=bio.css.map */

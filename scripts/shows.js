@@ -3,26 +3,22 @@ const labels = ['date', 'venue', 'location'];
 
 axios.get("https://project-1-api.herokuapp.com/showdates?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4").then(response => {
     let futureShows = response.data;
-    
     const showsContainer = document.querySelector('.shows__container');
-    //creating 3 <p> elements with class 'label' and nesting it within showsLabelDiv
     function addShows (featureShows) {
         const dateOfShow = new Date(featureShows.date);
-        
         var dateFormat = {
             weekday: "short",
             year: "numeric",
             month: "short",
             day: "numeric"
         };
-        //console.log(dateOfShow.toLocaleDateString("en".dateFormat));
 
         console.log(dateOfShow.toLocaleDateString("en", dateFormat));
 
         const showsShow = document.createElement("div");
         showsShow.classList.add("shows__show");
         showsContainer.appendChild(showsShow);
-    
+        
         const labelDate = document.createElement ('p');
         labelDate.classList.add('label','shows__label');
         showsShow.appendChild(labelDate);
@@ -58,22 +54,16 @@ axios.get("https://project-1-api.herokuapp.com/showdates?api_key=e0eea5f0-0f8c-4
         button.innerText = 'buy tickets';
         showsShow.appendChild(button);
     };
-    
     for (let i = 0; i<futureShows.length; i++){
         addShows(futureShows[i])
     };
-    
     var show = document.querySelectorAll('.shows__show');
-    console.log(show);
-    
-    show.forEach
-    
     show.forEach(function(item) {
         item.addEventListener("click", function() {
             show.forEach(function(element) {
             element.classList.remove("active");
             });
-            item.classList.add('active');
+            item.classList.add("active");
         })
     });
     });
